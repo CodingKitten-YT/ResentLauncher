@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resent Launcher</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/Resent.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="launcher-container">
+        <div id="launcher-content">
+            <div id="patch-notes-container">
+                <div id="patch-notes">
+                    <h1>Patch Notes</h1>
+                    <h3>Resent 4 Patch 2</h3>
+                    <p>[ + ] Fixed Assets Download Progress bug</p>
+                    <h3>Resent 4 Patch 1</h3>
+                    <p>[ + ] Fixed Invisible Click Gui Glitch</p>
+                    <h3>Resent 4 Patch 0</h3>
+                    <p>
+                        [ + ] Updated to EaglerCraft U22 (with singleplayer)<br>
+                        [ + ] Fixed Fast Math bugs/timing bugs (this should, in theory, make it so server owners won't have to loosen their anti-cheats)<br>
+                        [ + ] Better Main Menu<br>
+                        [ + ] New Main Menu Background<br>
+                        [ + ] New Anime Main Menu Backgrounds<br>
+                        [ + ] New Default Texture Pack (PvP texture pack)<br>
+                        [ + ] Added Saturation Mod (helps you predict when your hunger will start going down, it is a yellow outline on the hunger icons on top of the hotbar, it will also predict how much saturation the food you're currently holding will give you)<br>
+                        [ + ] Added TNT Timer Mod<br>
+                        [ + ] Added Server TPS Monitor Mod (will calculate how much the server is lagging on a scale of 0 to 20, 0 = basically frozen, 20 = no lag, anything above 20 means that the server is running faster than expected)<br>
+                        [ + ] Added No Foliage Option (can be found in FPS Options settings)<br>
+                        [ + ] Added Opaque Foliage Option (can be found in FPS Options settings)<br>
+                        [ + ] Added Some New Default Servers<br>
+                        [ + ] Fix Item Physics Mod<br>
+                        [ + ] Added Better Tab List Mod<br>
+                        [ + ] Fix Password Hiding Crash<br>
+                        [ + ] Fix Visual Glitches in Click Gui<br>
+                        [ + ] Added Hunger Prediction (will tell you how much hunger the food you're holding will give you, it shows up as slightly transparent hunger icons on the hunger bar)<br>
+                        [ + ] Scroll Zoom no longer scrolls the Hotbar<br>
+                        [ + ] Smooth Scrolling in Click Gui<br>
+                        [ + ] New HUD Mod Position System (with anchors and snap lines)<br>
+                        [ + ] Dark Loading Screen<br>
+                        [ + ] Moved No Particles Mod into a setting for FPS Options Mod
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="launcher-controls">
+            <img src="assets/Resent.png" alt="Resent Logo" id="logo">
+            <select id="version-dropdown">
+                <optgroup label="Versions">
+                    <option value="4.0-P2.html">Resent 4 Patch 2 (newest)</option>
+                    <option value="4.0-P1.html">Resent 4 Patch 1</option>
+                    <option value="4.0-P0.html">Resent 4 Patch 0</option>
+                    <option value="3.8.html">Resent 3.8</option>
+                    <option value="3.7.html">Resent 3.7</option>
+                    <option value="3.6.html">Resent 3.6</option>
+                    <option value="3.4.html">Resent 3.4</option>
+                    <option value="3.3.2.html">Resent 3.3.2</option>                    
+                </optgroup>
+            </select>
+            <button id="play-button">Play</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("play-button").addEventListener("click", function() {
+            var dropdown = document.getElementById("version-dropdown");
+            var selectedVersion = dropdown.options[dropdown.selectedIndex].value;
+            if (selectedVersion) {
+                window.location.href = "versions/1.8/" + selectedVersion;
+            }
+        });
+    </script>
+</body>
+</html>

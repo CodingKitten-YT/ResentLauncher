@@ -1,0 +1,110 @@
+/* Define font face for custom font */
+@font-face {
+    font-family: 'Louis George Cafe Bold';
+    src: url('assets/fonts/Louis George Cafe.ttf') format('truetype');
+}
+
+/* Apply custom font to the body */
+body {
+    font-family: 'Louis George Cafe Bold', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Style for the launcher container */
+#launcher-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* Style for the left side content */
+#launcher-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%; /* Left side takes up 3/4 of the screen */
+}
+
+/* Style for the patch notes container */
+#patch-notes-container {
+    max-height: 100vh; /* Set maximum height to viewport height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-image: url('assets/bg.png'); /* Background image */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the background */
+}
+
+/* Style for the patch notes */
+#patch-notes {
+    padding: 20px;
+    color: white; /* Set text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+}
+
+/* Style for the right side controls */
+#launcher-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%; /* Right side takes up 1/4 of the screen */
+    background-color: #333; /* Dark gray background */
+    color: white; /* Text color for contrast */
+    position: relative; /* Add position relative */
+    transition: width 0.5s ease, background-color 0.5s ease; /* Add transition effect */
+}
+
+/* Style for the version dropdown */
+#version-dropdown {
+    margin-bottom: 20px;
+    width: 200px; /* Increased width of dropdown */
+    padding: 10px;
+    font-size: 18px; /* Larger font size for better visibility */
+    background-color: #555; /* Dropdown background color */
+    color: white; /* Dropdown text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-family: 'Louis George Cafe Bold', Arial, sans-serif; /* Apply custom font */
+}
+
+/* Style for the play button */
+#play-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Increased padding */
+    font-size: 20px; /* Larger font size for better visibility */
+    cursor: pointer;
+    margin-bottom: 20px; /* Added margin for spacing */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition effect for transform and background-color */
+    font-family: 'Louis George Cafe Bold', Arial, sans-serif; /* Apply custom font */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Play button hover state */
+#play-button:hover {
+    transform: scale(1.1); /* Grow button by 10% on hover */
+    background-color: #45a049; /* Darker color on hover */
+}
+
+/* Style for the logo */
+#logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Added margin for spacing */
+    animation: logoAnimation 2s infinite alternate; /* Add logo animation */
+}
+
+/* Logo animation keyframes */
+@keyframes logoAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
